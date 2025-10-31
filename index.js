@@ -58,7 +58,7 @@ function stopTimer() {
 
 function resetTimer() {
     clearInterval(Timer);
-    timeLeft = 10 * 60;
+    timeLeft = 20 * 60;
     document.getElementById("timer").innerText = "10:00";
 }
 
