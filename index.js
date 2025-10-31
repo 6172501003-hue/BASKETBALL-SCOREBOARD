@@ -37,7 +37,7 @@ let Timer;
 let timeLeft = 20 * 60;
 
 function startTimer() {
-  clearInterval(Timer); // prevent multiple timers
+  clearInterval(Timer); 
     Timer = setInterval(() => {
     if (timeLeft <= 0) {
         clearInterval(Timer);
