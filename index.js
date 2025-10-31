@@ -34,7 +34,7 @@ function resetGuest(points) {
 }
 
 let Timer;
-let timeLeft = 10 * 60;
+let timeLeft = 20 * 60;
 
 function startTimer() {
   clearInterval(Timer); // prevent multiple timers
