@@ -59,7 +59,7 @@ function stopTimer() {
 function resetTimer() {
     clearInterval(Timer);
     timeLeft = 20 * 60;
-    document.getElementById("timer").innerText = "10:00";
+    document.getElementById("timer").innerText = "20:00";
 }
 
 
