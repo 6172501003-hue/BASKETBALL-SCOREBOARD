@@ -34,7 +34,7 @@ function resetGuest(points) {
 }
 
 let Timer;
-let timeLeft = 20 * 60;
+let timeLeft = 10 * 60;
 
 function startTimer() {
   clearInterval(Timer); 
@@ -58,6 +58,6 @@ function stopTimer() {
 
 function resetTimer() {
     clearInterval(Timer);
-    timeLeft = 20 * 60;
-    document.getElementById("timer").innerText = "20:00";
+    timeLeft = 10 * 60;
+    document.getElementById("timer").innerText = "10:00";
 }
