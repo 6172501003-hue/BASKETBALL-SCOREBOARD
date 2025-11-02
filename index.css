@@ -85,9 +85,9 @@ button {
 }
 
 .timer-controls button {
-    width: 100px;    
-    height: 50px;   
-    font-size: 18px; 
+    width: 100px;      /* same width for all */
+    height: 50px;      /* same height for all */
+    font-size: 18px;   /* make text readable */
     border-radius: 8px;
     border: 2px solid #aabbee;
     background: transparent;
@@ -98,17 +98,17 @@ button {
 
 .timer-controls button:hover {
     background: #aabbee;
-    color: #1a1f40; 
+    color: #1a1f40; /* dark background contrast */
 }
 
 .plus-column button:hover {
     background: #aabbee;
-    color: #1a1f40; 
+    color: #1a1f40; /* dark background contrast */
 }
 
 .minus-column button:hover {
     background: #aabbee;
-    color: #1a1f40;
+    color: #1a1f40; /* dark background contrast */
 }
 
 .reset-column {
@@ -130,5 +130,5 @@ button {
 
 .reset-column button:hover {
     background: #aabbee;
-    color: #1a1f40; 
+    color: #1a1f40; /* dark background contrast */
 }
