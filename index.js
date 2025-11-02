@@ -58,8 +58,8 @@ function stopTimer() { #menjeda/menghentikan timer
     clearInterval(Timer); 
 }
 
-function resetTimer() { #untuk mengatur ulang timer
-    clearInterval(Timer);
+function resetTimer() {
+    clearInterval(Timer); <!-- untuk mengatur ulang timer -->
     timeLeft = 10 * 60;
     document.getElementById("timer").innerText = "10:00";
 }
