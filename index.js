@@ -44,8 +44,6 @@ function startTimer() { //untuk memulai, menghentikan, dan mengatur ulang timer.
         document.getElementById("timer").innerText = "00:00"; 
     } else {
         let minutes = Math.floor(timeLeft / 60); 
-        //timeleft / 60 : Membagi total sisa detik dengan 60. (Contoh: 599 detik / 60 = 9.98...)
-        //math.floor untuk membulatkan angka hasil pembagian tadi ke bawah ke bilangan bulat terdekat. (Contoh: 9.98... dibulatkan menjadi 9).
         let seconds = timeLeft % 60; //Mengambil sisa hasil bagi. (Contoh: 599 % 60 adalah 59, karena $599 = 9 \times 60 + 59$).
         document.getElementById("timer").innerText =
         `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
