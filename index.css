@@ -1,134 +1,52 @@
-@font-face {
-    font-family: 'CursedTimer';
-    src: url('fonts/CursedTimerULiL.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* Pengaturan Dasar Halaman */
 body {
-    margin: 0;
-    background-color: #1B244A;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.fonth3 {
-    color: #EEE;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Latar belakang abu-abu muda */
+    color: #333;
     text-align: center;
-    font-family: Verdana;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 35.893px;
+    padding: 20px;
 }
 
-.background-score{
-    background-color: #080001;
+h1 {
+    color: #1a1a1a;
 }
 
-.colorTime {
-    color: #d22e2e;
-    text-align: center;
-    font-family: "Cursed Timer ULiL";
-    font-size: 90px;
-    font-style: normal;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 30px;
+h3 {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.colorScore{
-    color: #064E3B;
-    text-align: center;
-    font-family: "Cursed Timer ULiL";
-    font-size: 90px;
-    font-style: normal;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 30px;
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 30px 0;
 }
 
-.plusButton,.minusButton {
-    border-color: #9AABD8;
-    background-color: #1B244A;
-    color: #9AABD8;
-    width: 60px;
-    height: 40px;
-    font-size: 16px;
+/* Penampung Utama untuk Skor */
+.scoreboard-container {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-around; /* Memberi spasi antar item */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Memastikan responsif di layar kecil */
+    gap: 20px; /* Jarak antar kolom */
 }
 
-.resetButton {
-    border-color: #9AABD8;
-    background-color: #1B244A;
-    color: #9AABD8;
+/* Styling untuk setiap tim (Home & Guest) */
+.team-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px; /* Lebar tetap untuk setiap kolom skor */
 }
 
-.startTimer,.stopTimer,.resetTimer {
-    border-color: #9AABD8;
-    background-color: #1B244A;
-    color: #9AABD8;
-}
-
-.plus-column,.minus-column {
-    margin-bottom: 10px;
-}
-
-button {
-    width: 45px;
-    height: 45px;
-    flex-shrink: 0;
-    border-radius: 5px;
-    border: 2px solid #9AABD8;
-}
-
-.timer-controls button {
-    width: 100px;      /* same width for all */
-    height: 50px;      /* same height for all */
-    font-size: 18px;   /* make text readable */
+/* Tampilan Skor (seperti layar digital) */
+#homeScore, #guestScore {
+    font-size: 4rem; /* Ukuran font besar */
+    color: #fff;
+    background-color: #080808; /* Latar belakang hitam */
+    padding: 15px 20px;
     border-radius: 8px;
-    border: 2px solid #aabbee;
-    background: transparent;
-    color: #aabbee;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.timer-controls button:hover {
-    background: #aabbee;
-    color: #1a1f40; /* dark background contrast */
-}
-
-.plus-column button:hover {
-    background: #aabbee;
-    color: #1a1f40; /* dark background contrast */
-}
-
-.minus-column button:hover {
-    background: #aabbee;
-    color: #1a1f40; /* dark background contrast */
-}
-
-.reset-column {
-    grid-column: span 3;
-}
-.resetButton {
-    width: 100%;
-    box-sizing: border-box;
-    height: 50px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 2px solid #9AABD8;
-    background-color: #1B244A;
-    color: #9AABD8;
-    cursor: pointer;
-    margin-top: 10px;
-    display: block;
-}
-
-.reset-column button:hover {
-    background: #aabbee;
-    color: #1a1f40; /* dark background contrast */
-}
+    font-family: 'Courier New', Courier, monospace; /* Font digital */
