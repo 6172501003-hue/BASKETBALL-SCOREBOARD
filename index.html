@@ -4,81 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Scoreboard</title>
-    </head>
+    <link rel="stylesheet" href="style.css"> 
+</head>
 <body>
 
-    <h1>Basketball Scoreboard</h1>
-    <hr> <div>
-        <h3>HOME</h3>
-        <h2 id="homeScore">0</h2> 
+    <div class="page-wrapper">
+
+        <h1>Basketball Scoreboard</h1>
+        <hr>
+
+        <div class="scoreboard-container">
+            
+            <div class="team-section">
+                <h3>HOME</h3>
+                <h2 id="homeScore">0</h2>
+                <button onclick="addHome(1)">+1</button>
+                <button onclick="addHome(2)">+2</button>
+                <button onclick="resetHome()">Reset</button>
+            </div>
+
+            <div class="team-section">
+                <h3>GUEST</h3>
+                <h2 id="guestScore">0</h2>
+                <button onclick="addGuest(1)">+1</button>
+                <button onclick="addGuest(2)">+2</button>
+                <button onclick="resetGuest()">Reset</button>
+            </div>
+
+        </div>
         
-        <button onclick="addHome(1)">+1</button>
-        <button onclick="addHome(2)">+2</button>
-        <button onclick="resetHome()">Reset</button>
-    </div>
+        <hr>
 
-    <div>
-        <h3>GUEST</h3>
-        <h2 id="guestScore">0</h2>
+        <div class="timer-container">
+            <h3>Timer</h3>
+            <h2 id="timer">00:00</h2>
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+
+        <hr>
         
-        <button onclick="addGuest(1)">+1</button>
-        <button onclick="addGuest(2)">+2</button>
-        <button onclick="resetGuest()">Reset</button>
+        <h3>Game Rules</h3>
+        <ul>
+            <li>Game dimainkan 4 quarter.</li>
+            <li>Tim dengan skor tertinggi menang.</li>
+        </ul>
+
+        <h3>Top Scorers</h3>
+        <ol>
+            <li>Michael Jordan</li>
+            <li>LeBron James</li>
+        </ol>
+        
+        <p>Ini adalah teks biasa. <b>Ini teks tebal (bold).</b> <i>Ini teks miring (italic).</i></p>
+
+        <h3>Official Logo</h3>
+        <img src="logo-basket.png" alt="Logo Bola Basket" width="100">
+
+        <h3>Stats</h3>
+        <table border="1">
+            </table>
+
     </div>
-    
-    <hr>
-
-    <div>
-        <h3>Timer</h3>
-        <h2 id="timer">00:00</h2>
-        <button onclick="startTimer()">Start</button>
-        <button onclick="stopTimer()">Stop</button>
-        <button onclick="resetTimer()">Reset</button>
-    </div>
-
-    <hr>
-
-    <h3>Game Rules</h3>
-    <ul>
-        <li>Game dimainkan 4 quarter.</li>
-        <li>Tim dengan skor tertinggi menang.</li>
-    </ul>
-
-    <h3>Top Scorers</h3>
-    <ol>
-        <li>Michael Jordan</li>
-        <li>LeBron James</li>
-    </ol>
-    
-    <p>Ini adalah teks biasa. <b>Ini teks tebal (bold).</b> <i>Ini teks miring (italic).</i></p>
-
-    <h3>Official Logo</h3>
-    <img src="logo-basket.png" alt="Logo Bola Basket" width="100">
-
-    <h3>Stats</h3>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th>Points</th>
-                <th>Fouls</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Player A (Home)</td>
-                <td>12</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Player B (Guest)</td>
-                <td>9</td>
-                <td>1</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <script src="index.js"></script>
-
-</body>
-</html>
