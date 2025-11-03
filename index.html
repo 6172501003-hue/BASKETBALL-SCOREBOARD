@@ -1,64 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
-    <title>Basketball Scoreboard</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Scoreboard</title>
+    </head>
 <body>
-    <div class="container">
-        <!-- HOME Section -->
-        <div>
-            <h3 class="fonth3">HOME</h3>
-            <div class="background-score">
-                <p class="colorScore" id="homeScore">0</p>
-            </div>
-            <div class="plus-column">
-                <button class="plusButton" onclick="addHome(1)">+1</button>
-                <button class="plusButton" onclick="addHome(2)">+2</button>
-                <button class="plusButton" onclick="addHome(3)">+3</button>
-            </div>
-            <div class="minus-column">
-                <button class="minusButton" onclick="minusHome(1)">-1</button>
-                <button class="minusButton" onclick="minusHome(2)">-2</button>
-                <button class="minusButton" onclick="minusHome(3)">-3</button>
-            </div>
-            <div class="reset-column">
-                <button class="resetButton" onclick="resetHome()">Reset</button>
-            </div>
-        </div>
-        <!-- TIMER Section -->
-        <div>
-            <h3 class="fonth3">Timer</h3>
-            <div class="background-score">
-                <p class="colorTime" id="timer">10:00</p>
-            </div>
-            <div class="timer-controls">
-                <button class="startTimer" onclick="startTimer()">Start</button>
-                <button class="stopTimer" onclick="stopTimer()">Stop</button>
-                <button class="resetTimer" onclick="resetTimer()">Reset</button>
-            </div>
-        </div>
-        <!-- GUEST Section -->
-        <div>
-            <h3 class="fonth3">GUEST</h3>
-            <div class="background-score">
-                <p class="colorScore" id="guestScore">0</p>
-            </div>
-            <div class="plus-column">
-                <button class="plusButton" onclick="addGuest(1)">+1</button>
-                <button class="plusButton" onclick="addGuest(2)">+2</button>
-                <button class="plusButton" onclick="addGuest(3)">+3</button>
-            </div>
-            <div class="minus-column">
-                <button class="minusButton" onclick="minusGuest(1)">-1</button>
-                <button class="minusButton" onclick="minusGuest(2)">-2</button>
-                <button class="minusButton" onclick="minusGuest(3)">-3</button>
-            </div>
-            <div class="reset-column">
-                <button class="resetButton" onclick="resetGuest()">Reset</button>
-            </div>
-        </div>
+
+    <h1>Basketball Scoreboard</h1>
+    <hr> <div>
+        <h3>HOME</h3>
+        <h2 id="homeScore">0</h2> 
+        
+        <button onclick="addHome(1)">+1</button>
+        <button onclick="addHome(2)">+2</button>
+        <button onclick="resetHome()">Reset</button>
     </div>
+
+    <div>
+        <h3>GUEST</h3>
+        <h2 id="guestScore">0</h2>
+        
+        <button onclick="addGuest(1)">+1</button>
+        <button onclick="addGuest(2)">+2</button>
+        <button onclick="resetGuest()">Reset</button>
+    </div>
+    
+    <hr>
+
+    <div>
+        <h3>Timer</h3>
+        <h2 id="timer">00:00</h2>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <hr>
+
+    <h3>Game Rules</h3>
+    <ul>
+        <li>Game dimainkan 4 quarter.</li>
+        <li>Tim dengan skor tertinggi menang.</li>
+    </ul>
+
+    <h3>Top Scorers</h3>
+    <ol>
+        <li>Michael Jordan</li>
+        <li>LeBron James</li>
+    </ol>
+    
+    <p>Ini adalah teks biasa. <b>Ini teks tebal (bold).</b> <i>Ini teks miring (italic).</i></p>
+
+    <h3>Official Logo</h3>
+    <img src="logo-basket.png" alt="Logo Bola Basket" width="100">
+
+    <h3>Stats</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Points</th>
+                <th>Fouls</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Player A (Home)</td>
+                <td>12</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Player B (Guest)</td>
+                <td>9</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
     <script src="index.js"></script>
+
 </body>
 </html>
